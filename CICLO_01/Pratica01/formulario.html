@@ -1,0 +1,47 @@
+<!--
+* Curso de Engenharia de Software - UniEVANGÉLICA 
+* Disciplina de Programação Web 
+* Dev: Rita de Cássia da Costa Silva
+* DATA: 11/05/2024
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Materialize</title>
+   <!-- Inclusão do CSS do Materialize -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+   <!-- Link para os ícones do Materialize -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Inclusão do arquivo de estilo personalizado -->
+   <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h3 class="center-align">Formulário - Cadastro</h3>
+        <form>
+            <!-- Campo de entrada para o email -->
+            <div class="input-field">
+                <i class="material-icons prefix">email</i>  <!-- Ícone de email adicionado -->
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+            <!-- Campo de entrada para a senha -->
+            <div class="input-field">
+                <i class="material-icons prefix">lock</i> <!-- Ícone de fechadura para o campo de senha -->
+                <input id="password" type="password" class="validate">
+                <label for="password">Senha</label>
+            </div>
+            <!-- Botão de enviar com ícone de envio -->
+            <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+            </button>
+        </form>
+    </div>
+
+    <!-- Inclusão do JavaScript do Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+</body>
+</html>

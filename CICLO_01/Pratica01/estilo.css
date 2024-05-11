@@ -1,0 +1,50 @@
+/*
+* Curso de Engenharia de Software - UniEVANGÉLICA 
+* Disciplina de Programação Web 
+* Dev: Rita de Cássia da Costa Silva
+* DATA: 11/05/2024
+*/
+
+@charset "UTF-8";
+
+/* Estilo básico para o corpo da página, garantindo que o formulário esteja centralizado verticalmente */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ajustado para min-height para cobrir toda a altura visível */
+    padding: 20px; /* Padding adicionado para evitar que o formulário toque as bordas da janela */
+    background-color: #f4f4f4; /* Cor de fundo suave para a página */
+}
+
+/* Estilização dos campos de entrada com ícones */
+.input-field {
+    position: relative; /* Necessário para posicionar o ícone corretamente */
+}
+
+/* Ícones para os campos de entrada */
+.input-field .prefix {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 12px; /* Ajuste vertical para alinhar o ícone com o texto */
+    color: #9e9e9e; /* Cor do ícone */
+}
+
+/* Ajustes para o campo de entrada para dar espaço para o ícone */
+.input-field input {
+    padding-left: 40px; /* Espaço suficiente para o ícone não sobrepor o texto */
+}
+
+/* Personalização do botão para dar um destaque maior e melhorar a estética */
+.btn {
+    background-color: #a046c4; /* Cor personalizada para o botão */
+    width: 100%; /* Faz o botão expandir para a largura total do container */
+    border-radius: 4px; /* Borda arredondada para o botão */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para o botão */
+}
+
+/* Efeito hover para o botão, para interatividade */
+.btn:hover {
+    background-color: #480f71; /* Cor mais clara ao passar o mouse */
+}
