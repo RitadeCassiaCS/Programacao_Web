@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* Configuração básica do corpo da página */
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte do texto */
+    background-color: #f4f4f4; /* Cor de fundo para toda a página */
+    display: flex; /* Utiliza flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da viewport */
+    margin: 0; /* Remove as margens padrão */
+}
+
+/* Estilização do container principal da aplicação */
+#app {
+    width: 500px; /* Largura fixa do container */
+    background: white; /* Fundo branco para destacar do fundo da página */
+    padding: 20px; /* Espaço interno para não colar o conteúdo nas bordas */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil para efeito 3D */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilização do cabeçalho */
+h1 {
+    color: #333; /* Cor do texto do cabeçalho */
+    margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+}
+
+/* Estilo comum para inputs e botões */
+input, button {
+    width: 100%; /* Ocupa toda a largura disponível do container */
+    padding: 12px; /* Espessura interna para maior legibilidade */
+    margin-bottom: 10px; /* Espaço abaixo de cada elemento */
+    border: 2px solid #ddd; /* Borda sutil para definição */
+    border-radius: 4px; /* Bordas arredondadas para estética suave */
+    box-sizing: border-box; /* Garante que padding não adicione à largura total */
+}
+
+/* Estilização dos inputs com ícones */
+input[type="text"], input[type="time"] {
+    padding-left: 15px; 
+    background-size: 15px;
+}
+
+/* Efeito ao focar inputs e botões */
+input:focus, button:focus {
+    border-color: #710f92; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão ao focar */
+}
+
+/* Estilização dos botões */
+button {
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Texto branco para contraste */
+    cursor: pointer; /* Cursor indica ação clicável */
+    transition: background-color 0.3s; /* Transição suave da cor de fundo */
+}
+
+/* Efeito hover para botões */
+button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilização da lista de tarefas */
+ul {
+    list-style: none; /* Remove estilos de lista */
+    padding: 0; /* Remove padding padrão */
+}
+
+/* Estilização de cada item da lista */
+li {
+    background: #f9f9f9; /* Fundo claro para cada item */
+    padding: 15px; /* Espaço interno para separação visual */
+    border: 2px solid #ddd; /* Borda sutil */
+    border-radius: 6px; /* Bordas arredondadas */
+    display: flex; /* Utiliza flexbox para alinhamento interno */
+    justify-content: space-between; /* Distribui espaço entre conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    margin-bottom: 10px; /* Espaço abaixo de cada item */
+}
+
+/* Estilização para tarefas concluídas */
+.completed {
+    color: #777; /* Cor cinza indica tarefa completada */
+    text-decoration: line-through; /* Linha atravessada como indicativo visual */
+}
+
+/* Margem interna para botões, assegurando separação entre eles */
+button {
+    margin: 0 5px;
+}

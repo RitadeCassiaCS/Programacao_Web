@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tarefas</title>
+    <!-- CDN do VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Lista de Tarefas</h1>
+        <!-- Input para adicionar novas tarefas e especificar a hora de realização -->
+        <input v-model="newTask" @keyup.enter="addTask" placeholder="Adicione uma nova tarefa">
+        <input type="time" v-model="taskTime" placeholder="Hora para realizar">
+        <button @click="addTask">Adicionar Tarefa</button>
+
+        <ul>
+            <!-- Lista de tarefas com horário para realizar -->
+            <li v-for="(task, index) in tasks" :key="index">
+                <!-- Exibe o nome da tarefa e a hora para realizá-la -->
+                <span :class="{ completed: task.completed }">
+                    {{ task.name }} - Realizar às {{ task.time }}
+                </span>
+                <!-- Botões para marcar como concluída e remover tarefa -->
+                <button @click="completeTask(index)">Concluir</button>
+                <button @click="removeTask(index)">Remover</button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                newTask: '', // Modelo para o input de nova tarefa
+                taskTime: '', // Modelo para o input do horário de realização
+                tasks: [] // Array para armazenar as tarefas
+            },
+            methods: {
+                addTask() {
+                    if (this.newTask.trim() !== '' && this.taskTime !== '') {
+                        // Adiciona nova tarefa ao array de tarefas com horário especificado
+                        this.tasks.push({
+                            name: this.newTask,
+                            completed: false,
+                            time: this.taskTime // Armazena o horário especificado
+                        });
+                        this.newTask = ''; // Limpa o input de tarefa
+                        this.taskTime = ''; // Limpa o input de horário
+                    }
+                },
+                completeTask(index) {
+                    // Alterna o estado de concluído da tarefa
+                    this.tasks[index].completed = !this.tasks[index].completed;
+                },
+                removeTask(index) {
+                    // Remove a tarefa do array
+                    this.tasks.splice(index, 1);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
